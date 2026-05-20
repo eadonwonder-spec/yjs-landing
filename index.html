@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>勇吉興衡器 | Load Cell 專業代理 — 台灣設備製造商合作夥伴</title>
+  <meta name="description" content="多家國際品牌荷重元經銷。TS安全認證、IECEx防爆認證、35年台灣在地服務、工程師直接對口。統槽秤重、製藥防爆、食品機械、PLC整合。Load Cell、結合箱、顯示器、大字幕、安裝調校一站服務。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:        #0F172A;
+      --navy-mid:    #1E293B;
+      --blue:        #EAB308;
+      --blue-light:  #FEF9C3;
+      --text:        #0F172A;
+      --text-mid:    #475569;
+      --text-light:  #94A3B8;
+      --bg:          #F8FAFC;
+      --white:       #FFFFFF;
+      --border:      #E2E8F0;
+      --line-green:  #06C755;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', -apple-system, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #111111;
+      padding: 0 32px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 100;
+    }
+
+    .nav-left { display: flex; align-items: center; gap: 28px; }
+
+    .nav-logo {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+    }
+
+    .nav-logo:visited { color: white; }
+    .nav-logo:hover   { color: rgba(255,255,255,0.82); }
+
+    .nav-logo em {
+      font-style: normal;
+      color: #64748B;
+      font-weight: 400;
+      font-size: 12px;
+      margin-left: 8px;
+    }
+
+    .nav-phone {
+      color: #94A3B8;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .nav-phone:visited { color: #94A3B8; }
+    .nav-phone:hover   { color: #CBD5E1; }
+
+    .btn-line {
+      background: var(--line-green);
+      color: white;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: opacity 0.15s;
+      white-space: nowrap;
+    }
+
+    .btn-line:hover { opacity: 0.88; }
+
+    .btn-line-lg {
+      padding: 13px 28px;
+      font-size: 16px;
+      border-radius: 8px;
+    }
+
+    .line-icon { width: 18px; height: 18px; fill: white; flex-shrink: 0; }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--navy);
+      padding: 80px 32px 88px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg-slides { position: absolute; inset: 0; z-index: 0; }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center 40%;
+      opacity: 0;
+      transition: opacity 1.6s ease;
+    }
+    .hero-bg.active { opacity: 1; }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(0,0,0,0.75) 0%,
+        rgba(0,0,0,0.48) 45%,
+        rgba(0,0,0,0.08) 100%
+      );
+      z-index: 1;
+    }
+
+    .hero-inner { max-width: 860px; margin: 0 auto; position: relative; z-index: 2; }
+
+    .hero-dots {
+      position: absolute;
+      bottom: 24px;
+      right: 40px;
+      display: flex;
+      gap: 8px;
+      z-index: 3;
+    }
+
+    .hero-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255,255,255,0.25);
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .hero-dot.active { background: white; transform: scale(1.3); }
+
+    .hero-kicker {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 20px;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.9);
+    }
+
+    .hero h1 {
+      font-size: clamp(46px, 8vw, 88px);
+      font-weight: 900;
+      line-height: 1.0;
+      margin-bottom: 14px;
+      text-shadow: 0 2px 28px rgba(0,0,0,1), 0 0 80px rgba(0,0,0,0.85);
+    }
+
+    .hero h1 span { color: inherit; }
+
+    .hero-sub-title {
+      font-size: clamp(19px, 3vw, 28px);
+      color: rgba(255,255,255,0.95);
+      font-weight: 600;
+      margin-bottom: 28px;
+      text-shadow: 0 1px 14px rgba(0,0,0,0.98);
+    }
+
+    .hero-desc {
+      font-size: 15px;
+      color: rgba(255,255,255,0.72);
+      max-width: 540px;
+      margin-bottom: 36px;
+      line-height: 1.75;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.95);
+    }
+
+    .cert-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+
+    .cert-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 12px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      border: 1px solid;
+    }
+
+    .cb-green, .cb-blue, .cb-amber, .cb-slate {
+      border-color: rgba(255,255,255,0.28);
+      color: rgba(255,255,255,0.8);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .hero-cta { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+
+    .hero-cta-note { font-size: 13px; color: rgba(255,255,255,0.6); text-shadow: 0 1px 6px rgba(0,0,0,0.9); }
+
+    .hero-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      margin: 56px 0 48px;
+    }
+
+    .hero-stats { display: flex; gap: 56px; flex-wrap: wrap; row-gap: 24px; }
+
+    .stat-n { font-size: 40px; font-weight: 900; color: white; line-height: 1; text-shadow: 0 1px 12px rgba(0,0,0,0.95); }
+    .stat-l { font-size: 14px; color: rgba(255,255,255,0.78); margin-top: 8px; letter-spacing: 0.3px; text-shadow: 0 1px 8px rgba(0,0,0,0.9); }
+
+    /* ── SECTION COMMON ── */
+    .section { padding: 96px 32px; }
+    .section-alt { background: var(--bg); }
+    .container { max-width: 1080px; margin: 0 auto; }
+
+    .section-header { margin-bottom: 56px; }
+
+    .section-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: #EAB308;
+      color: #0F172A;
+      padding: 2px 10px;
+      border-radius: 2px;
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+
+    .section-header h2 {
+      font-size: clamp(26px, 3.2vw, 36px);
+      font-weight: 900;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .section-header p { font-size: 15px; color: var(--text-mid); max-width: 560px; line-height: 1.8; }
+
+    /* ── BRANDS ── */
+    .brands-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .brand-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      background: white;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-card-head { padding: 24px 22px; border-bottom: 1px solid var(--border); background: #F5F5F5; }
+
+    .brand-card-head.laumas,
+    .brand-card-head.sensocar,
+    .brand-card-head.mkcells { background: #F5F5F5; }
+
+    .brand-name {
+      font-size: 26px;
+      font-weight: 800;
+      color: #111111;
+      letter-spacing: -0.5px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .brand-origin { font-size: 12px; color: #64748B; margin-bottom: 14px; }
+
+    .brand-certs { display: flex; flex-wrap: wrap; gap: 5px; }
+
+    .brand-cert {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 3px 8px;
+      border-radius: 3px;
+      border: 1px solid;
+    }
+
+    .bc-green, .bc-blue, .bc-amber, .bc-slate {
+      border-color: #CBD5E1;
+      color: #475569;
+    }
+
+    .brand-card-body { padding: 22px; flex: 1; display: flex; flex-direction: column; }
+
+    .brand-pos {
+      font-size: 13px;
+      color: var(--text-mid);
+      margin-bottom: 18px;
+      line-height: 1.7;
+    }
+
+    .brand-products-heading {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: #EAB308;
+      color: #0F172A;
+      padding: 2px 8px;
+      border-radius: 2px;
+      display: inline-block;
+      align-self: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .brand-products { list-style: none; flex: 1; }
+
+    .brand-products li {
+      font-size: 13px;
+      color: var(--text-mid);
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-products li:last-child { border-bottom: none; }
+
+    .brand-products li::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: #94A3B8;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .brand-ext-link {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--text);
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    .brand-ext-link:hover { color: var(--text-mid); }
+
+    /* ── APPLICATIONS ── */
+    .app-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .app-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px 20px;
+    }
+
+    .app-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .app-card p { font-size: 13px; color: var(--text-mid); line-height: 1.7; }
+
+    /* ── WHY US ── */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      background: white;
+    }
+
+    .why-item {
+      padding: 36px 32px;
+      border-bottom: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+    }
+
+    .why-item:nth-child(2n)   { border-right: none; }
+    .why-item:nth-last-child(-n+2) { border-bottom: none; }
+
+    .why-num {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #94A3B8;
+      margin-bottom: 14px;
+    }
+
+    .why-item h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .why-item p  { font-size: 14px; color: var(--text-mid); line-height: 1.8; }
+
+    /* ── CASE STORY ── */
+    .case-industry {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 8px;
+    }
+
+    .case-story-header { margin-bottom: 28px; }
+    .case-story-header h3 { font-size: 22px; font-weight: 700; margin-bottom: 12px; }
+
+    .case-challenge {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 24px;
+    }
+
+    .case-challenge-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #475569;
+      margin-bottom: 8px;
+    }
+
+    .case-challenge p { font-size: 14px; color: var(--text-mid); line-height: 1.8; }
+
+    .case-photos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 640px) {
+      .case-photos-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .case-photo-item { display: flex; flex-direction: column; gap: 6px; }
+
+    .case-story-photo {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 6px;
+      display: block;
+    }
+
+    .case-photo-cap {
+      font-size: 11px;
+      color: var(--text-light);
+      line-height: 1.4;
+    }
+
+    .case-outcome {
+      padding: 14px 18px;
+      background: white;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .case-outcome-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #475569;
+      margin-bottom: 5px;
+    }
+
+    .case-outcome p { font-size: 14px; color: var(--text); line-height: 1.8; }
+
+    /* ── CERT MARQUEE ── */
+    .cert-marquee-section {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 36px 0 32px;
+      overflow: hidden;
+    }
+    .cert-marquee-label {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-mid);
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .cert-marquee-wrap {
+      overflow: hidden;
+      max-width: 680px;
+      margin: 0 auto;
+      -webkit-mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+      mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+    }
+    @keyframes marquee-scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .cert-marquee-track {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      animation: marquee-scroll 20s linear infinite;
+    }
+    .cert-marquee-section:hover .cert-marquee-track { animation-play-state: paused; }
+    .cert-marquee-track img {
+      height: 80px;
+      width: auto;
+      object-fit: contain;
+      opacity: 0.85;
+      flex-shrink: 0;
+      padding-right: 88px;
+      transition: opacity 0.2s;
+    }
+    .cert-marquee-track img:hover { opacity: 1; }
+
+    /* ── MULTIPLE CASE STORIES ── */
+    .case-stories-list { display: flex; flex-direction: column; gap: 52px; }
+
+    /* ── FAQ ── */
+    .faq-list { max-width: 720px; margin: 0 auto; }
+
+    .faq-item { border-bottom: 1px solid var(--border); }
+
+    .faq-q {
+      padding: 20px 0;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      user-select: none;
+      transition: color 0.15s;
+    }
+
+    .faq-q:hover { color: #0F172A; }
+
+    .faq-icon {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      color: var(--text-mid);
+      transition: transform 0.2s;
+    }
+
+    .faq-icon.open { transform: rotate(45deg); }
+
+    .faq-a {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s ease, padding-bottom 0.2s;
+    }
+
+    .faq-a.open { max-height: 250px; padding-bottom: 18px; }
+
+    .faq-a p { font-size: 14px; color: var(--text-mid); line-height: 1.85; }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: white;
+      border-top: 1px solid var(--border);
+      padding: 80px 32px;
+      text-align: center;
+      color: var(--text);
+    }
+
+    .cta-section h2 { font-size: clamp(28px, 4.5vw, 48px); font-weight: 900; margin-bottom: 12px; }
+    .cta-section p  { font-size: 16px; color: var(--text-mid); margin-bottom: 36px; }
+
+    /* ── FOOTER ── */
+    footer { background: #111111; }
+
+    .footer-main {
+      background: #1A1A1A;
+      border-top: 1px solid #222222;
+      padding: 52px 32px 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 260px;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .footer-col-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #94A3B8;
+      margin-bottom: 16px;
+    }
+
+    .footer-links { list-style: none; }
+
+    .footer-links li { margin-bottom: 11px; }
+
+    .footer-links a {
+      font-size: 14px;
+      color: #94A3B8;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover { color: #CBD5E1; }
+
+    .footer-map-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #475569;
+      margin-bottom: 10px;
+    }
+
+    .footer-map-col iframe {
+      border-radius: 8px;
+      display: block;
+      border: 0;
+      width: 100%;
+      height: 155px;
+    }
+
+    .footer-bottom {
+      background: #111111;
+      border-top: 1px solid #1A1A1A;
+      padding: 18px 32px;
+    }
+
+    .footer-bottom-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: #94A3B8;
+      line-height: 2;
+    }
+
+    .footer-company { color: #94A3B8; font-weight: 600; }
+
+    .footer-sep { color: #475569; }
+
+    .footer-bottom-inner a { color: #94A3B8; text-decoration: none; }
+    .footer-bottom-inner a:hover { color: #CBD5E1; }
+
+    @media (max-width: 900px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .footer-main { padding: 36px 20px 28px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .footer-bottom { padding: 16px 20px; }
+    }
+
+    @media (max-width: 420px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── CERT BAND ── */
+    .cert-band-section {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 36px 32px;
+    }
+
+    .cert-band-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--text-light);
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .cert-logos-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+
+    .cert-logo-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      opacity: 0.65;
+      transition: opacity 0.15s;
+    }
+
+    .cert-logo-wrap:hover { opacity: 1; }
+
+    .cert-logo-wrap img {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .cert-logo-wrap span {
+      font-size: 11px;
+      color: var(--text-light);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .cert-logo-featured img  { height: 56px; }
+    .cert-logo-featured span { font-size: 12px; color: var(--text-mid); font-weight: 700; }
+    .cert-logo-featured      { opacity: 0.9; }
+
+    /* ── PRODUCT PHOTOS in brand card ── */
+    .brand-product-row {
+      display: flex;
+      gap: 8px;
+      margin-top: 14px;
+      justify-content: center;
+    }
+
+    .brand-product-row img {
+      width: 68px;
+      height: 68px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: white;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 860px) {
+      .brands-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .section  { padding: 56px 20px; }
+      .hero     { padding: 60px 20px 72px; }
+      nav       { padding: 0 20px; }
+      .nav-phone { display: none; }
+      .why-grid { grid-template-columns: 1fr; border: none; }
+      .why-item { border-right: none !important; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 12px; }
+      .why-item:nth-last-child(-n+2) { border-bottom: 1px solid var(--border); }
+    }
+    /* ── BRAND PRODUCT PLACEHOLDER ── */
+    .brand-product-placeholder {
+      width: 68px;
+      height: 68px;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      color: #475569;
+      text-align: center;
+      line-height: 1.4;
+      flex-shrink: 0;
+    }
+
+    /* ── SELECTOR 選型指南 ── */
+    .selector-list {
+      max-width: 860px;
+      margin: 0 auto;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .selector-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 1px solid var(--border);
+      background: white;
+    }
+    .selector-row:last-child { border-bottom: none; }
+    .selector-scenario {
+      padding: 20px 24px;
+      border-right: 1px solid var(--border);
+    }
+    .selector-rec { padding: 20px 24px; }
+    .selector-tag {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      color: #0F172A;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+    .selector-need {
+      display: block;
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+    .selector-brand {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 5px;
+    }
+    .selector-why {
+      display: block;
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+
+    /* ── PROCESS 合作流程 ── */
+    .process-steps {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .process-step {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 30px 26px;
+    }
+    .process-num {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #94A3B8;
+      margin-bottom: 12px;
+    }
+    .process-step h3 { font-size: 15px; font-weight: 700; margin-bottom: 10px; }
+    .process-step p  { font-size: 13px; color: var(--text-mid); line-height: 1.75; }
+    .process-arrow { display: flex; justify-content: center; padding: 0 14px; flex-shrink: 0; }
+
+    @media (max-width: 760px) {
+      .process-steps { grid-template-columns: 1fr; max-width: 480px; }
+      .process-arrow svg { transform: rotate(90deg); }
+      .process-arrow { padding: 8px 0; }
+      .selector-row { grid-template-columns: 1fr; }
+      .selector-scenario { border-right: none; border-bottom: 1px solid var(--border); }
+    }
+
+    /* ── 字體統一：傳產客群適讀性（一致尺度） ── */
+    /* 主體文字：16px */
+    .hero-desc, .section-header p,
+    .brand-pos, .app-card p,
+    .why-item p, .process-step p,
+    .selector-need, .selector-why,
+    .faq-a p, .case-challenge p, .case-outcome p { font-size: 16px; }
+
+    /* 小標題：18px */
+    .app-card h3, .why-item h3,
+    .process-step h3, .faq-q { font-size: 18px; }
+
+    /* 清單與次要文字：15px */
+    .brand-products li, .footer-links a,
+    .selector-brand { font-size: 15px; }
+
+    /* 圖說保持小 */
+    .case-photo-cap { font-size: 13px; }
+
+    /* CTA 段落稍大 */
+    .cta-section p { font-size: 17px; }
+
+    .footer-links a { color: #94A3B8; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-left">
+    <a href="#" class="nav-logo">勇吉興衡器 <em>Y.J.S. Scientech</em></a>
+    <a href="tel:0226872998" class="nav-phone">02-2687-2998</a>
+  </div>
+  <a href="https://line.me/R/ti/p/@420gwmyt" target="_blank" rel="noopener" class="btn-line">
+    <svg class="line-icon" viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.494.25l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+    加LINE詢問
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-slides">
+    <div class="hero-bg active" style="background-image: url('images/hero-installation.jpg')"></div>
+    <div class="hero-bg" style="background-image: url('images/hero-cleanroom.jpg')"></div>
+    <div class="hero-bg" style="background-image: url('images/hero-pipes.jpg')"></div>
+    <div class="hero-bg" style="background-image: url('images/hero-pharma.jpg')"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-kicker">Load Cell &amp; Weighing Systems — 台灣設備製造商專屬合作夥伴</div>
+    <h1>勇吉興衡器</h1>
+    <div class="hero-sub-title">荷重元專業代理 · 技術選型支援</div>
+    <p class="hero-desc">
+      多家國際品牌荷重元經銷——義大利防爆認證、西班牙精密製造、美國工業標準。
+      TS 安全認證 / IECEx 防爆認證供應、35 年台灣在地服務、工程師直接對口——
+      Load Cell、結合箱、顯示器、大字幕，選型到交付一站解決。
+    </p>
+    <div class="cert-row">
+      <span class="cert-badge cb-amber">✓ TS 安全認證 TD140107</span>
+      <span class="cert-badge cb-green">✓ IECEx 防爆認證</span>
+      <span class="cert-badge cb-blue">✓ ATEX 認證</span>
+      <span class="cert-badge cb-slate">工程師直接對口</span>
+      <span class="cert-badge cb-slate">300+ 品項庫存快速出貨</span>
+    </div>
+    <div class="hero-cta">
+      <a href="https://line.me/R/ti/p/@420gwmyt" target="_blank" rel="noopener" class="btn-line btn-line-lg">
+        <svg class="line-icon" viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.494.25l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+        立即加LINE詢問
+      </a>
+      <span class="hero-cta-note">或致電 02-2687-2998</span>
+    </div>
+    <hr class="hero-divider">
+    <div class="hero-stats">
+      <div><div class="stat-n">35+</div><div class="stat-l">台灣在地服務年資</div></div>
+      <div><div class="stat-n">多品牌</div><div class="stat-l">國際品牌經銷</div></div>
+      <div><div class="stat-n">TS 認證</div><div class="stat-l">台灣安全認證供應</div></div>
+      <div><div class="stat-n">當天</div><div class="stat-l">選型回覆</div></div>
+    </div>
+  </div>
+  <div class="hero-dots">
+    <button class="hero-dot active" onclick="goHeroSlide(0)" aria-label="場景一"></button>
+    <button class="hero-dot" onclick="goHeroSlide(1)" aria-label="場景二"></button>
+    <button class="hero-dot" onclick="goHeroSlide(2)" aria-label="場景三"></button>
+    <button class="hero-dot" onclick="goHeroSlide(3)" aria-label="場景四"></button>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section class="section" id="brands">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">代理品牌</span>
+      <h2>多家國際品牌，全場景覆蓋</h2>
+      <p>義大利防爆認證、西班牙精密製造、美國工業標準——依場景選最合適品牌</p>
+    </div>
+    <div class="brands-grid">
+
+      <!-- 義大利品牌 -->
+      <div class="brand-card">
+        <div class="brand-card-head laumas">
+          <div class="brand-name">義大利品牌</div>
+          <div class="brand-origin">🇮🇹 防爆認證 · 精密秤重 · 1971 年成立</div>
+          <div class="brand-certs">
+            <span class="brand-cert bc-amber">TS</span>
+            <span class="brand-cert bc-green">IECEx</span>
+            <span class="brand-cert bc-blue">ATEX</span>
+            <span class="brand-cert bc-amber">OIML</span>
+            <span class="brand-cert bc-slate">CE</span>
+          </div>
+          <div class="brand-product-row">
+            <img src="images/product-laumas-cbl.jpg" alt="壓縮式荷重元">
+            <img src="images/product-laumas-ftp.jpg" alt="剪切式荷重元">
+            <img src="images/product-laumas-w200.png" alt="重量顯示器">
+          </div>
+        </div>
+        <div class="brand-card-body">
+          <p class="brand-pos">
+            全系列具備 IECEx / ATEX 防爆認證，台灣 TS 安全認證（TD140107）。製藥廠、化工廠稽核用認證文件完整，可隨貨提供。1971 年成立，產品線涵蓋荷重元、儀表、配件，共 80+ 系列。
+          </p>
+          <div class="brand-products-heading">產品線</div>
+          <ul class="brand-products">
+            <li>荷重元（壓縮式 / 拉伸式 / 剪切式 / 懸臂式 / 柱型）</li>
+            <li>重量顯示器 / 重量傳送器（4-20mA / RS485 / 現場總線）</li>
+            <li>IECEx / ATEX 防爆全系列儀表</li>
+            <li>結合箱 / 防爆結合箱</li>
+            <li>大字幕遠端顯示器 / 多槽配料控制器</li>
+            <li>荷重元安裝配件 / 足座</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 西班牙品牌 -->
+      <div class="brand-card">
+        <div class="brand-card-head sensocar">
+          <div class="brand-name">西班牙品牌</div>
+          <div class="brand-origin">🇪🇸 精密製造 · OEM 客製彈性 · 歐洲品質標準</div>
+          <div class="brand-certs">
+            <span class="brand-cert bc-slate">CE</span>
+            <span class="brand-cert bc-blue">ATEX</span>
+            <span class="brand-cert bc-amber">OIML</span>
+            <span class="brand-cert bc-green">IP67</span>
+          </div>
+          <div class="brand-product-row">
+            <img src="images/product-sensocar-2.jpg" alt="懸臂式荷重元 TA1">
+            <img src="images/product-sensocar-1.jpg" alt="剪切式荷重元 BS1">
+            <img src="images/product-sensocar-4.jpg" alt="壓縮式荷重元 SP-DC">
+            <img src="images/product-sensocar-3.jpg" alt="重量顯示器 SCA30">
+          </div>
+        </div>
+        <div class="brand-card-body">
+          <p class="brand-pos">
+            西班牙精密荷重元製造商，擅長 OEM 與非標客製需求。多種外形尺寸與安裝孔位可選，機構空間有限制或設計圖有特定尺寸要求的設備廠首選。不鏽鋼材質，IP67 防護，適用食品、藥廠等清潔製程環境，ATEX 型亦可選。
+          </p>
+          <div class="brand-products-heading">產品線</div>
+          <ul class="brand-products">
+            <li>懸臂式荷重元（Bending Beam）— 1 kg ～ 500 kg</li>
+            <li>S 型荷重元（S-Type）— 25 kg ～ 2 t，壓縮 / 拉伸兩用</li>
+            <li>壓縮式荷重元（Canister）— 500 kg ～ 30 t</li>
+            <li>客製外形 / 非標安裝尺寸荷重元</li>
+            <li>不鏽鋼 / 食品級材質可選</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 美國品牌 -->
+      <div class="brand-card">
+        <div class="brand-card-head mkcells">
+          <div class="brand-name">美國品牌</div>
+          <div class="brand-origin">🇺🇸 工業標準規格 · 高 CP 值 · NTEP 計量認證</div>
+          <div class="brand-certs">
+            <span class="brand-cert bc-slate">CE</span>
+            <span class="brand-cert bc-slate">NTEP</span>
+            <span class="brand-cert bc-amber">OIML</span>
+            <span class="brand-cert bc-green">IP67</span>
+          </div>
+          <div class="brand-product-row">
+            <img src="images/product-mkcell-bending.png" alt="懸臂式荷重元 MK-Z6">
+            <img src="images/product-mkcell-1.png" alt="剪切式荷重元">
+            <img src="images/product-mkcell-3.png" alt="重型壓縮荷重元">
+            <img src="images/product-mkcell-2.png" alt="單點式荷重元">
+          </div>
+        </div>
+        <div class="brand-card-body">
+          <p class="brand-pos">
+            符合美國 NTEP 計量認證，標準工業安裝尺寸，可直接替換市場主流規格。CP 值高，交期快，量大有議價彈性。適合一般工業秤重、平台秤、輸送帶計量、量產設備成本最佳化選型。
+          </p>
+          <div class="brand-products-heading">產品線</div>
+          <ul class="brand-products">
+            <li>懸臂式荷重元（Bending Beam）— 10 kg ～ 500 kg</li>
+            <li>S 型荷重元（S-Type）— 100 kg ～ 10 t</li>
+            <li>壓縮式荷重元（Canister）— 500 kg ～ 100 t</li>
+            <li>單點式荷重元（Single Point）— 5 kg ～ 500 kg</li>
+            <li>平台秤 / 輸送帶計量用款</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SELECTOR 選型指南 -->
+<section class="section" id="selector">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">選型指南</span>
+      <h2>依需求快速對應</h2>
+      <p>不確定要用哪個規格？依應用場景找推薦，或加 LINE 直接詢問</p>
+    </div>
+    <div class="selector-list">
+      <div class="selector-row">
+        <div class="selector-scenario">
+          <span class="selector-tag">製藥廠 / 化工廠</span>
+          <span class="selector-need">需要防爆認證文件（IECEx / ATEX / TS），通過進場稽核</span>
+        </div>
+        <div class="selector-rec">
+          <span class="selector-brand">→ 義大利品牌</span>
+          <span class="selector-why">全系列 IECEx / ATEX / TS 認證，認證文件隨貨提供</span>
+        </div>
+      </div>
+      <div class="selector-row">
+        <div class="selector-scenario">
+          <span class="selector-tag">統槽 / OEM 設備廠</span>
+          <span class="selector-need">標準秤重應用，重視穩定供貨與技術對口</span>
+        </div>
+        <div class="selector-rec">
+          <span class="selector-brand">→ 義大利品牌 / 美國品牌</span>
+          <span class="selector-why">依量程與精度需求決定，常備 300+ 品項</span>
+        </div>
+      </div>
+      <div class="selector-row">
+        <div class="selector-scenario">
+          <span class="selector-tag">特殊規格 / 非標安裝尺寸</span>
+          <span class="selector-need">標準品無法符合機構設計，需要特殊安裝尺寸或客製規格</span>
+        </div>
+        <div class="selector-rec">
+          <span class="selector-brand">→ 西班牙品牌</span>
+          <span class="selector-why">多種特殊規格尺寸，歐洲精密製造，彈性高</span>
+        </div>
+      </div>
+      <div class="selector-row">
+        <div class="selector-scenario">
+          <span class="selector-tag">量產 / 成本最佳化</span>
+          <span class="selector-need">一般工業應用，優先考慮 CP 值，量產穩定供貨</span>
+        </div>
+        <div class="selector-rec">
+          <span class="selector-brand">→ 美國品牌</span>
+          <span class="selector-why">工業標準規格，高 CP 值，量大有議價空間</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERT MARQUEE -->
+<div class="cert-marquee-section">
+  <div class="cert-marquee-label">標準認證</div>
+  <div class="cert-marquee-wrap">
+    <div class="cert-marquee-track">
+      <img src="images/cert-ts.png" alt="TS 台灣安全認證">
+      <img src="images/cert-iecex.png" alt="IECEx 防爆認證">
+      <img src="images/cert-atex.png" alt="ATEX 防爆認證">
+      <img src="images/cert-oiml.png" alt="OIML 國際法制計量">
+      <img src="images/cert-ce.png" alt="CE 認證">
+      <img src="images/cert-ntep.png" alt="NTEP 美國計量認證">
+      <img src="images/cert-eac.png" alt="EAC 歐亞認證">
+      <!-- duplicate for seamless loop -->
+      <img src="images/cert-ts.png" alt="TS 台灣安全認證">
+      <img src="images/cert-iecex.png" alt="IECEx 防爆認證">
+      <img src="images/cert-atex.png" alt="ATEX 防爆認證">
+      <img src="images/cert-oiml.png" alt="OIML 國際法制計量">
+      <img src="images/cert-ce.png" alt="CE 認證">
+      <img src="images/cert-ntep.png" alt="NTEP 美國計量認證">
+      <img src="images/cert-eac.png" alt="EAC 歐亞認證">
+    </div>
+  </div>
+</div>
+
+<!-- APPLICATIONS -->
+<section class="section section-alt" id="applications">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">應用產業</span>
+      <h2>國際規格，在地服務</h2>
+      <p>從統槽製程到製藥防爆，我們熟悉台灣設備廠的各類應用場景，協助你快速選型並完成整合</p>
+    </div>
+    <div class="app-grid">
+      <div class="app-card">
+        <h3>統槽 / 料倉秤重</h3>
+        <p>多點荷重元配置，料倉、統槽秤重系統選型與計算支援，確保長期穩定性與精度要求。</p>
+      </div>
+      <div class="app-card">
+        <h3>機械設備廠 OEM</h3>
+        <p>為設備廠提供完整選型支援——量程計算、安裝方式確認、訊號規格建議，設計圖直接討論，減少來回溝通。</p>
+      </div>
+      <div class="app-card">
+        <h3>食品機械秤重</h3>
+        <p>符合食品衛生設計標準，IP 防護等級，高精度荷重元，適用自動化生產線秤重站。</p>
+      </div>
+      <div class="app-card">
+        <h3>包裝 / 充填機械</h3>
+        <p>高速充填機、計量包裝線用荷重元，重視動態響應速度與抗振干擾，適合連續自動化生產。</p>
+      </div>
+      <div class="app-card">
+        <h3>製藥 / 化工防爆</h3>
+        <p>IECEx / ATEX 認證荷重元與顯示器，符合 GMP 製程及 Zone 1/2 防爆需求，認證文件完整。</p>
+      </div>
+      <div class="app-card">
+        <h3>批量配料 / 多槽計量</h3>
+        <p>多料槽、多荷重元並行秤重，支援配料投料計量系統設計，訊號整合至上位機或 HMI。</p>
+      </div>
+      <div class="app-card">
+        <h3>PLC / 控制系統整合</h3>
+        <p>配合各廠牌 PLC，提供訊號轉換方案與整合建議，工程師直接對口，快速解決整合問題。</p>
+      </div>
+      <div class="app-card">
+        <h3>張力 / 吊秤量測</h3>
+        <p>拉伸型荷重元，適用起重機吊秤、張力監控、鋼索受力量測等特殊應用場景。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section" id="why-us">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">差異化</span>
+      <h2>設備廠選荷重元供應商，我們的差異</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-num">01</div>
+        <h3>35+ 台灣度量衡在地服務經驗</h3>
+        <p>深耕台灣度量衡產業逾 35 年，對製程需求、安裝問題、現場故障有第一線在地經驗。不是只賣零件——是直接給你解法。</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">02</div>
+        <h3>IECEx / TS 防爆認證供應</h3>
+        <p>代理義大利品牌全系列，IECEx / ATEX 防爆認證、台灣 TS 安全認證（TD140107）完整。製藥廠、化工廠稽核要求的認證文件，隨貨提供。</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">03</div>
+        <h3>技術協作，不只是經銷</h3>
+        <p>提供現場技術支援，工程師直接對口。設計圖可以直接討論，不走業務轉傳流程，選型、安裝、整合一路跟到底。</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">04</div>
+        <h3>300+ 品項儲備，快速出貨</h3>
+        <p>常備 300+ 品項庫存，緊急需求優先安排。機台趕交期時，我們不讓荷重元成為你的瓶頸。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PROCESS 合作流程 -->
+<section class="section" id="process">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">合作流程</span>
+      <h2>三步驟，從詢問到出貨</h2>
+      <p>工程師全程跟進，不走業務轉傳</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="process-num">01</div>
+        <h3>說明你的需求</h3>
+        <p>加 LINE 或致電，描述量程、安裝方式、環境條件與認證需求。不需要先知道型號規格。</p>
+      </div>
+      <div class="process-arrow">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+      <div class="process-step">
+        <div class="process-num">02</div>
+        <h3>工程師直接回覆選型</h3>
+        <p>當天回覆，推薦適合規格，確認認證文件需求，報價一同附上。</p>
+      </div>
+      <div class="process-arrow">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+      <div class="process-step">
+        <div class="process-num">03</div>
+        <h3>確認規格，快速出貨</h3>
+        <p>常規規格 1–3 個工作天出貨，附原廠認證文件與出廠報告。</p>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:40px; position:relative; z-index:2;">
+      <a href="https://line.me/R/ti/p/@420gwmyt" target="_blank" rel="noopener" class="btn-line btn-line-lg">
+        <svg class="line-icon" viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.494.25l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+        立即加LINE詢問
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="section section-alt" id="cases">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">現場實績</span>
+      <h2>真實案例，完整紀錄</h2>
+      <p>以下案例均已匿名，呈現從需求確認到現場驗收的真實交付流程</p>
+    </div>
+
+    <div class="case-stories-list">
+
+      <!-- CASE 1: 製藥防爆 -->
+      <div>
+        <div class="case-story-header">
+          <div class="case-industry">製藥設備製造商（匿名）</div>
+          <h3>GMP 統槽秤重 — IECEx 防爆完整配置</h3>
+        </div>
+        <div class="case-challenge">
+          <div class="case-challenge-label">需求背景</div>
+          <p>台灣製藥設備廠設計符合 GMP 規範的不鏽鋼統槽產品，設備出售後須通過製藥廠進場稽核。荷重元與顯示器必須具備 IECEx 防爆認證，並提供完整 CE 符合性文件，交期緊，認證文件不能拖。</p>
+        </div>
+        <div class="case-photos-grid">
+          <div class="case-photo-item">
+            <img src="images/case1-tank-overview.jpg" alt="不鏽鋼統槽全景" class="case-story-photo">
+            <span class="case-photo-cap">① 現場不鏽鋼統槽全景，確認安裝位置與結構配置</span>
+          </div>
+          <div class="case-photo-item">
+            <img src="images/case1-engineer-tank.jpg" alt="工程師現場評估安裝條件" class="case-story-photo">
+            <span class="case-photo-cap">② 工程師現場評估安裝條件、量程與精度需求</span>
+          </div>
+          <div class="case-photo-item">
+            <img src="images/case1-loadcell-mount.jpg" alt="IECEx荷重元安裝" class="case-story-photo">
+            <span class="case-photo-cap">③ IECEx 認證荷重元安裝於槽體支撐座</span>
+          </div>
+        </div>
+        <div class="case-outcome">
+          <div class="case-outcome-label">交付結果</div>
+          <p>IECEx 認證荷重元 + 防爆顯示器完整配置，台灣 TS 安全認證文件、CE 符合性聲明一週內到位。客戶設備順利通過製藥廠 GMP 進場稽核，零補件。</p>
+        </div>
+      </div>
+
+      <!-- CASE 2: 食品機械批量配料 -->
+      <div>
+        <div class="case-story-header">
+          <div class="case-industry">食品機械製造商（匿名）</div>
+          <h3>自動批量配料機 — 多組荷重元同步計量</h3>
+        </div>
+        <div class="case-challenge">
+          <div class="case-challenge-label">需求背景</div>
+          <p>食品機械廠設計自動批量配料設備，需多組荷重元同步秤重，訊號精準整合至 HMI 顯示與控制。客戶強調精度要求高，且設備量產後需穩定供貨，不能因荷重元缺貨影響交期。</p>
+        </div>
+        <div class="case-photos-grid">
+          <div class="case-photo-item">
+            <img src="images/case2-batch-shipment.jpg" alt="批量出貨備料" class="case-story-photo">
+            <span class="case-photo-cap">① 同規格荷重元批量備貨，確保量產供貨穩定</span>
+          </div>
+          <div class="case-photo-item">
+            <img src="images/case2-display-reading.jpg" alt="顯示器讀值確認" class="case-story-photo">
+            <span class="case-photo-cap">② 顯示器訊號確認，多組讀值同步穩定</span>
+          </div>
+          <div class="case-photo-item">
+            <img src="images/case2-calibration.jpg" alt="現場砝碼校正驗收" class="case-story-photo">
+            <span class="case-photo-cap">③ 現場砝碼校正，精度驗收達客戶要求</span>
+          </div>
+        </div>
+        <div class="case-outcome">
+          <div class="case-outcome-label">交付結果</div>
+          <p>多組荷重元快速出貨，現場校正精度達標，配料批次誤差符合客戶食品製程規格。後續量產備貨納入常備庫存，客戶出機台無需等料。</p>
+        </div>
+      </div>
+
+      <!-- CASE 3: PLC整合 -->
+      <div>
+        <div class="case-story-header">
+          <div class="case-industry">系統整合商（匿名）</div>
+          <h3>工廠秤重站 PLC 整合 — 訊號對接完整交付</h3>
+        </div>
+        <div class="case-challenge">
+          <div class="case-challenge-label">需求背景</div>
+          <p>系統整合商承接工廠秤重站建置專案，需荷重元訊號配合現有 PLC 規格，現場接線與控制箱整合需在有限工期內完成。客戶要求有工程師技術對口，不能只有業務轉傳。</p>
+        </div>
+        <div class="case-photos-grid">
+          <div class="case-photo-item">
+            <img src="images/case3-plc-engineer.jpg" alt="PLC工程師現場技術討論" class="case-story-photo">
+            <span class="case-photo-cap">① 工程師現場技術對口，確認 PLC 訊號規格與接線方式</span>
+          </div>
+          <div class="case-photo-item">
+            <img src="images/case3-wiring-work.jpg" alt="接線施工作業" class="case-story-photo">
+            <span class="case-photo-cap">② 訊號接線、接地確認，配線施工整齊到位</span>
+          </div>
+          <div class="case-photo-item">
+            <img src="images/case3-control-box.jpg" alt="控制箱整合完成" class="case-story-photo">
+            <span class="case-photo-cap">③ 控制箱安裝完成，顯示器整合，訊號正常輸出</span>
+          </div>
+        </div>
+        <div class="case-outcome">
+          <div class="case-outcome-label">交付結果</div>
+          <p>工程師直接協助確認訊號規格，省去業務轉傳來回時間。接線與 PLC 整合一次到位，控制箱建置完成，秤重站如期完工驗收。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">常見問題</span>
+      <h2>工程師常問的問題</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          荷重元的交期通常多久？
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="faq-a">
+          <p>常規規格現貨通常 1–3 個工作天出貨，300+ 品項常備庫存。特殊規格或 IECEx 防爆認證型號視庫存狀況，一般 1–2 週。緊急需求加 LINE 直接確認。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          需要 IECEx / ATEX 防爆認證，你們有辦法提供嗎？
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="faq-a">
+          <p>有。代理義大利品牌全系列，具備 IECEx / ATEX 防爆認證、台灣 TS 安全認證（TD140107）。CE 符合性聲明及認證文件可隨貨提供，適用製藥廠、化工廠稽核。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          可以協助確認選型嗎？我不確定要用哪種規格
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="faq-a">
+          <p>可以。加 LINE 描述你的應用場景（量程、安裝方式、環境條件、精度需求），我們直接給選型建議。不需要你先知道規格型號。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          有沒有最小訂購量限制？
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="faq-a">
+          <p>沒有強制最小訂購量，1 支也可以下單。設備廠打樣、驗證、少量先採都沒問題。量大有議價空間，直接談。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          你們提供現場安裝或技術支援嗎？
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="faq-a">
+          <p>有提供現場技術支援。PLC 整合問題、訊號確認、安裝注意事項，加 LINE 描述情況，先遠端協助，需要時再安排現場。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          跟大盤商買有什麼差別？
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="faq-a">
+          <p>大盤商適合標準規格大量採購。我們的差異：技術對口快（直接問不轉業務）、供應 IECEx / TS 認證品牌、300+ 品項常備庫存、少量緊急也處理、選型直接幫你確認。重視快速解決問題，找我們比較有效率。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>有需求？加 LINE 直接說</h2>
+    <p>描述你的應用場景，我們當天回覆選型建議</p>
+    <a href="https://line.me/R/ti/p/@420gwmyt" target="_blank" rel="noopener" class="btn-line btn-line-lg">
+      <svg class="line-icon" viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.494.25l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+      加LINE @420gwmyt
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-col">
+          <div class="footer-col-title">關於我們</div>
+          <ul class="footer-links">
+            <li><a href="#why-us">35 年在地服務</a></li>
+            <li><a href="#brands">代理品牌</a></li>
+            <li><a href="#cases">現場實績</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col-title">產品與服務</div>
+          <ul class="footer-links">
+            <li><a href="#brands">荷重元 Load Cell</a></li>
+            <li><a href="#brands">重量顯示器 / 傳送器</a></li>
+            <li><a href="#applications">應用產業</a></li>
+            <li><a href="#selector">選型指南</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col-title">聯絡諮詢</div>
+          <ul class="footer-links">
+            <li><a href="#process">合作流程</a></li>
+            <li><a href="#faq">常見問題</a></li>
+            <li><a href="https://line.me/R/ti/p/@420gwmyt" target="_blank" rel="noopener">LINE @420gwmyt</a></li>
+            <li><a href="tel:0226872998">02-2687-2998</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-map-col">
+          <div class="footer-map-label">找到我們</div>
+          <iframe
+            src="https://maps.google.com/maps?q=24.9982657,121.4265798&hl=zh-TW&z=17&output=embed"
+            loading="lazy"
+            title="勇吉興衡器位置 — 新北市樹林區">
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-inner">
+        <span class="footer-company">勇吉興衡器有限公司 · Y.J.S. Scientech Co., Ltd.</span>
+        <span class="footer-sep">|</span>
+        <span>TEL：<a href="tel:0226872998">02-2687-2998</a></span>
+        <span class="footer-sep">|</span>
+        <span>238 新北市樹林區千歲街 63-1 號(1F)</span>
+        <span class="footer-sep">|</span>
+        <span>LINE：<a href="https://line.me/R/ti/p/@420gwmyt" target="_blank" rel="noopener">@420gwmyt</a></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleFAQ(el) {
+  const answer = el.nextElementSibling;
+  const icon = el.querySelector('.faq-icon');
+  const isOpen = answer.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('open'));
+  if (!isOpen) {
+    answer.classList.add('open');
+    icon.classList.add('open');
+  }
+}
+
+// Hero background carousel
+(function() {
+  const slides = document.querySelectorAll('.hero-bg');
+  const dots   = document.querySelectorAll('.hero-dot');
+  let current  = 0;
+  let timer;
+
+  window.goHeroSlide = function(n) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+    clearInterval(timer);
+    timer = setInterval(() => goHeroSlide(current + 1), 6000);
+  };
+
+  timer = setInterval(() => goHeroSlide(current + 1), 6000);
+})();
+</script>
+
+</body>
+</html>
