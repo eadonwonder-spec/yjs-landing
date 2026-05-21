@@ -19,7 +19,7 @@
       --text:        #0F172A;
       --text-mid:    #475569;
       --text-light:  #94A3B8;
-      --bg:          #F8FAFC;
+      --bg:          #F5F5F5;
       --white:       #FFFFFF;
       --border:      #E2E8F0;
       --line-green:  #06C755;
@@ -236,6 +236,49 @@
     .stat-n { font-size: 40px; font-weight: 900; color: white; line-height: 1; text-shadow: 0 1px 12px rgba(0,0,0,0.95); }
     .stat-l { font-size: 14px; color: rgba(255,255,255,0.78); margin-top: 8px; letter-spacing: 0.3px; text-shadow: 0 1px 8px rgba(0,0,0,0.9); }
 
+    /* ── STATS STRIP ── */
+    .stats-strip {
+      background: #1A1A1A;
+      padding: 44px 32px;
+      border-top: 1px solid #2A2A2A;
+    }
+
+    .stats-strip-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 28px 0;
+    }
+
+    .strip-stat {
+      text-align: center;
+      flex: 1;
+      min-width: 120px;
+    }
+
+    .strip-stat-n {
+      font-size: 38px;
+      font-weight: 900;
+      color: #EAB308;
+      line-height: 1;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .strip-stat-l {
+      font-size: 13px;
+      color: #94A3B8;
+      letter-spacing: 0.3px;
+    }
+
+    @media (max-width: 640px) {
+      .stats-strip { padding: 32px 20px; }
+      .stats-strip-inner { gap: 24px 0; }
+      .strip-stat-n { font-size: 30px; }
+    }
+
     /* ── SECTION COMMON ── */
     .section { padding: 96px 32px; }
     .section-alt { background: var(--bg); }
@@ -257,7 +300,7 @@
     }
 
     .section-header h2 {
-      font-size: clamp(26px, 3.2vw, 36px);
+      font-size: clamp(28px, 3.5vw, 40px);
       font-weight: 900;
       margin-bottom: 16px;
       line-height: 1.2;
@@ -273,12 +316,12 @@
     }
 
     .brand-card {
-      border: 1px solid var(--border);
       border-radius: 10px;
       overflow: hidden;
       background: white;
       display: flex;
       flex-direction: column;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.09);
     }
 
     .brand-card-head { padding: 24px 22px; border-bottom: 1px solid var(--border); background: #F5F5F5; }
@@ -380,9 +423,9 @@
 
     .app-card {
       background: white;
-      border: 1px solid var(--border);
       border-radius: 8px;
       padding: 24px 20px;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.07);
     }
 
     .app-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
@@ -586,15 +629,14 @@
 
     /* ── CTA ── */
     .cta-section {
-      background: white;
-      border-top: 1px solid var(--border);
+      background: #111111;
       padding: 80px 32px;
       text-align: center;
-      color: var(--text);
+      color: white;
     }
 
-    .cta-section h2 { font-size: clamp(28px, 4.5vw, 48px); font-weight: 900; margin-bottom: 12px; }
-    .cta-section p  { font-size: 16px; color: var(--text-mid); margin-bottom: 36px; }
+    .cta-section h2 { font-size: clamp(28px, 4.5vw, 48px); font-weight: 900; margin-bottom: 12px; color: #EAB308; }
+    .cta-section p  { font-size: 16px; color: #94A3B8; margin-bottom: 36px; }
 
     /* ── FOOTER ── */
     footer { background: #111111; }
@@ -849,9 +891,9 @@
     }
     .process-step {
       background: white;
-      border: 1px solid var(--border);
       border-radius: 10px;
       padding: 30px 26px;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.07);
     }
     .process-num {
       font-size: 11px;
@@ -873,28 +915,45 @@
     }
 
     /* ── 字體統一：傳產客群適讀性（一致尺度） ── */
-    /* 主體文字：16px */
+    /* 主體文字：17px */
     .hero-desc, .section-header p,
     .brand-pos, .app-card p,
     .why-item p, .process-step p,
     .selector-need, .selector-why,
-    .faq-a p, .case-challenge p, .case-outcome p { font-size: 16px; }
+    .faq-a p, .case-challenge p, .case-outcome p { font-size: 17px; }
 
-    /* 小標題：18px */
+    /* 小標題：20px */
     .app-card h3, .why-item h3,
-    .process-step h3, .faq-q { font-size: 18px; }
+    .process-step h3, .faq-q { font-size: 20px; }
 
-    /* 清單與次要文字：15px */
+    /* 清單與次要文字：16px */
     .brand-products li, .footer-links a,
-    .selector-brand { font-size: 15px; }
+    .selector-brand { font-size: 16px; }
 
     /* 圖說保持小 */
     .case-photo-cap { font-size: 13px; }
 
     /* CTA 段落稍大 */
-    .cta-section p { font-size: 17px; }
+    .cta-section p { font-size: 18px; }
 
     .footer-links a { color: #94A3B8; }
+
+    /* ── MICRO-TEXT FLOOR: B2B 可讀性，最小 12px ── */
+    .section-tag,
+    .footer-col-title,
+    .why-num,
+    .process-num,
+    .case-industry,
+    .case-challenge-label,
+    .case-outcome-label,
+    .cert-band-label { font-size: 12px; }
+
+    .hero-kicker  { font-size: 13px; }
+    .brand-origin { font-size: 13px; }
+    .cert-badge   { font-size: 12px; }
+    .brand-cert, .brand-products-heading { font-size: 11px; }
+
+    .strip-stat-l { font-size: 14px; }
   </style>
 </head>
 <body>
@@ -942,13 +1001,6 @@
       </a>
       <span class="hero-cta-note">或致電 02-2687-2998</span>
     </div>
-    <hr class="hero-divider">
-    <div class="hero-stats">
-      <div><div class="stat-n">35+</div><div class="stat-l">台灣在地服務年資</div></div>
-      <div><div class="stat-n">多品牌</div><div class="stat-l">國際品牌經銷</div></div>
-      <div><div class="stat-n">TS 認證</div><div class="stat-l">台灣安全認證供應</div></div>
-      <div><div class="stat-n">當天</div><div class="stat-l">選型回覆</div></div>
-    </div>
   </div>
   <div class="hero-dots">
     <button class="hero-dot active" onclick="goHeroSlide(0)" aria-label="場景一"></button>
@@ -957,6 +1009,16 @@
     <button class="hero-dot" onclick="goHeroSlide(3)" aria-label="場景四"></button>
   </div>
 </section>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="stats-strip-inner">
+    <div class="strip-stat"><div class="strip-stat-n">35+</div><div class="strip-stat-l">台灣在地服務年資</div></div>
+    <div class="strip-stat"><div class="strip-stat-n">多品牌</div><div class="strip-stat-l">國際品牌經銷</div></div>
+    <div class="strip-stat"><div class="strip-stat-n">TS 認證</div><div class="strip-stat-l">台灣安全認證供應</div></div>
+    <div class="strip-stat"><div class="strip-stat-n">當天</div><div class="strip-stat-l">選型回覆</div></div>
+  </div>
+</div>
 
 <!-- BRANDS -->
 <section class="section" id="brands">
@@ -1073,7 +1135,7 @@
 </section>
 
 <!-- SELECTOR 選型指南 -->
-<section class="section" id="selector">
+<section class="section section-alt" id="selector">
   <div class="container">
     <div class="section-header">
       <span class="section-tag">選型指南</span>
@@ -1228,7 +1290,7 @@
 
 
 <!-- PROCESS 合作流程 -->
-<section class="section" id="process">
+<section class="section section-alt" id="process">
   <div class="container">
     <div class="section-header">
       <span class="section-tag">合作流程</span>
@@ -1268,7 +1330,7 @@
 </section>
 
 <!-- CASES -->
-<section class="section section-alt" id="cases">
+<section class="section" id="cases">
   <div class="container">
     <div class="section-header">
       <span class="section-tag">現場實績</span>
@@ -1373,7 +1435,7 @@
 </section>
 
 <!-- FAQ -->
-<section class="section" id="faq">
+<section class="section section-alt" id="faq">
   <div class="container">
     <div class="section-header">
       <span class="section-tag">常見問題</span>
@@ -1448,7 +1510,7 @@
 <!-- CTA -->
 <section class="cta-section">
   <div class="container">
-    <h2>有需求？加 LINE 直接說</h2>
+    <h2>你的度量衡需求，交給專業的來。</h2>
     <p>描述你的應用場景，我們當天回覆選型建議</p>
     <a href="https://line.me/R/ti/p/@420gwmyt" target="_blank" rel="noopener" class="btn-line btn-line-lg">
       <svg class="line-icon" viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.494.25l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
